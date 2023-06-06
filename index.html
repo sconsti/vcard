@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="template_normal.min.css">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<!--MODAL-->
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	<!--LOADING-->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="vcard.js"></script>
+    <link rel="stylesheet" href="style.css?ver=34414">
+    <link href="https://fonts.googleapis.com/css2" rel="stylesheet">
+	
+	<script>
+		$( document ).ready(function() {
+	  
+			$('#vcard').click( function(e) { 
+				GenerarVcard(); 
+				var elemremove1 = $('#vcardcanvas');
+				elemremove1.remove();
+			} );
+			
+		});
+	</script>
+	
+	
+  </head>
+  <body>
+<div class="vcard-header">
+	<!--<img class="mylogoh" id="logo_imagen" src="./img/logo.png" alt="" style="width:10%">-->
+      <div id="pantalla1" class="contenedor">
+
+
+
+  <div class="card" style="width:500px">
+	<div class="body-a">
+		<center>
+		<img id="foto_imagen" class="card-img-top" src="data:image/foto.png" alt="" >
+		<p class="card-title"><span class="nombre"><Mayret Acuña</span><span> </span><!--<span class="apellido">Acuña</span>--></p>
+		<p id="puesto" class="card-title">V.P de Tecnologia de la Informacion</p>
+
+		<div class="vcard-functions-wrapper">
+		<a href="tel:04242590472" ng-show="!loadDemo &amp;&amp; (view.numbers_mobile || view.numbers_phone)">
+			<i class="fa fa-phone"></i>
+			<small class="dynamicTextColor">Llamar</small>
+		</a>
+		<a href="mailto:mayretacuna@segurosconstitucion.com?subject=Desde mi vCard&amp;body=" target="_newEmail" ng-show="!loadDemo &amp;&amp; (view.email)">
+			<i class="fa fa-envelope"></i>
+			<small class="dynamicTextColor">Email</small>
+		</a>
+
+
+
+		<a class="idirecciones" style="#FFFFFF" data-toggle="modal" data-target="#myModal">
+			<i class="fa fa-map-marker"></i>
+			<small class="idirecciones" class="dynamicTextColor" >Direcciones</small>
+		</a>
+        </div>
+		</center>
+	</div>
+
+
+	
+	<div class="body-b">
+		<form>
+		  <div class="form-group row" style="width: 730px;">
+			
+			<div class="col-8">
+			  <div class="input-group">
+				<div class="input-group-prepend">
+				  <div class="input-group-text">
+					<i class="fa fa-phone"> Móvil</i>
+				  </div>
+				</div> 
+				<a id="telefono1" href="#" class="form-control">04242590472</a>
+			  </div>
+			</div>
+		  </div>
+		  
+		  <div class="form-group row" style="width: 730px;">
+			
+			<div class="col-8">
+			  <div class="input-group">
+				<div class="input-group-prepend">
+				  <div class="input-group-text">
+					<i class="fa fa-envelope"> Email</i>
+				  </div>
+				</div> 
+				<a id="correo" href="#" class="form-control">mayretacuna@segurosconstitucion.com</a>
+			  </div>
+			</div>
+		  </div>
+		  
+		  <div class="form-group row" style="width: 730px;">
+			<div class="col-8">
+			  <div class="input-group">
+				<div class="input-group-prepend">
+				  <div class="input-group-text">
+					<i class="fa fa-briefcase"> Empresa</i>
+				  </div>
+				</div> 
+				<a id="empresa" href="#" class="form-control">Seguros Constitucion</a>
+			  </div>
+			</div>
+		  </div>
+		  
+		  <div class="form-group row" style="width: 730px;">
+			
+			<div class="col-8">
+			  <div class="input-group">
+				<div class="input-group-prepend">
+				  <div class="input-group-text">
+					<i class="fa fa-map-marker"> Mapa</i>
+				  </div>
+				</div> 
+				<a id="direccion" href="#" class="form-control" style="height: 100px;">Av. Venezuela, entre Av. Lazo Martí y Calle Mohedano. El Rosal Caracas, Dto. Capital 1060 Venezuela</a>
+			  </div>
+			</div>
+		  </div>
+		  
+		  <div class="form-group row" style="width: 730px;">
+			
+			<div class="col-8">
+			  <div class="input-group">
+				<div class="input-group-prepend">
+				  <div class="input-group-text">
+					<i class="fa fa-globe"> Página web</i>
+				  </div>
+				</div> 
+				<a id="web" href="#" class="form-control">https://www.segurosconstitucion.com</a>
+			  </div>
+			</div>
+		  </div> 
+
+		</form>
+	</div>
+
+				
+      <a id="vcard" href="#" class="btn btn-primary"><i class="fa fa-user"></i> Descargar Vcard</a>
+
+
+
+
+<?php
+  }
+} else {
+  echo "0 results";
+}
+$conn->close();
+?> 
+
+  </div>
+  <br>
+  
+
+
+
+      </div>
+
+
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Modal body..
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+	<!-- LOADING -->
+	
+	<div class="loader-card" id="loader-wrapper">
+		<div id="loader"></div>
+		
+		<div class="loader-section section-left"></div>
+		<div class=""><img class="mylogo" id="logo_imagen" src="./img/logo.png" alt="" style="width:10%;"></div>
+        <div class="loader-section section-right"></div>
+	</div>
+	
+
+	<!--LOADING-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>
